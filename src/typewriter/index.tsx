@@ -15,15 +15,12 @@ const TypewriterComp = ({ onInit }: TypewriterProps) => {
   }, [])
 
   React.useEffect(() => {
-    if(typewriterRef.current) {
-      console.log(typewriterRef.current.innerText)
-    }
-    if (onInit && instance && !typewriterRef.current.innerText) {
-      onInit(instance)
+    if (onInit && instance && typewriterRef.current.innerText.length === 0) {
+      onInit(instance);
     }
   }, [instance, onInit])
 
-  return <div ref={typewriterRef}></div>;
+  return <div className="typewriter" ref={typewriterRef}></div>;
 };
 
 export default TypewriterComp;

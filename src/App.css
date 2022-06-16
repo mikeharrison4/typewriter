@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 10px;
 }
 
 .App-logo {
@@ -34,5 +35,27 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.typewriter {
+  position: relative;
+  min-height: 18px;
+  /*width: max-content;*/
+}
+
+.typewriter::after {
+  content: '';
+  background-color: teal;
+  position: absolute;
+  width: .125rem;
+  height: 100%;
+  top: 0;
+  animation: blink 650ms ease infinite;
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
   }
 }

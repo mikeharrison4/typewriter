@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Typewriter onInit={(typewriter) => {
         typewriter
+          .pauseFor(2000)
           .typeString("Frontend Engineer")
           .pauseFor(500)
           .typeString(".")

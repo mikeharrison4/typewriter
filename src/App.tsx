@@ -1,12 +1,18 @@
-import React, {SetStateAction, useEffect, useRef, useState} from 'react';
+import React from 'react';
 import './App.css';
-import Typewriter from "./typewriter";
-import Test from "./Test";
+import Typewriter from "./typewriter/";
 
 function App() {
-    return (
+  return (
     <div className="App">
-      <Test />
+      <Typewriter onInit={(typewriter) => {
+        typewriter
+          .typeString("Frontend Engineer")
+          .pauseFor(500)
+          .typeString(".")
+          .start();
+      }} />
+      <h1>hello</h1>
     </div>
   );
 }
